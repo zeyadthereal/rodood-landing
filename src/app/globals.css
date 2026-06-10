@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Rodood Brand Colors ── */
+  --color-primary:        #2E53EA;
+  --color-primary-dark:   #2444C9;
+  --color-primary-light:  #E9EEFF;
+
+  --color-violet:         #7C3AED;
+  --color-violet-light:   #F1EAFF;
+
+  --color-mint:           #20C997;
+  --color-mint-light:     #E6FFF6;
+
+  --color-bg:             #F8FAFC;
+  --color-surface:        #FFFFFF;
+  --color-text-strong:    #0F172A;
+  --color-text-main:      #334155;
+  --color-text-muted:     #64748B;
+  --color-border:         #E2E8F0;
+
+  /* ── Typography ── */
+  --font-sans: "Inter", "Cairo", "IBM Plex Sans Arabic", system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #F8FAFC;
+  color: #334155;
+  font-family: "Inter", "Cairo", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #2E53EA 0%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Chat bubble animations */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(12px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+.animate-slide-left  { animation: slideInLeft  0.5s ease forwards; }
+.animate-slide-right { animation: slideInRight 0.5s ease forwards; }
+.animate-fade-up     { animation: fadeInUp     0.6s ease forwards; }
+
+.animate-delay-100 { animation-delay: 0.1s; opacity: 0; }
+.animate-delay-200 { animation-delay: 0.2s; opacity: 0; }
+.animate-delay-300 { animation-delay: 0.3s; opacity: 0; }
+.animate-delay-400 { animation-delay: 0.4s; opacity: 0; }
+.animate-delay-500 { animation-delay: 0.5s; opacity: 0; }
+.animate-delay-600 { animation-delay: 0.6s; opacity: 0; }
+.animate-delay-700 { animation-delay: 0.7s; opacity: 0; }
+
+/* Typing dots */
+.typing-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #94a3b8;
+  animation: pulse-dot 1.2s ease-in-out infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
