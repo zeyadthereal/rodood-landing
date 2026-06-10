@@ -40,6 +40,9 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   metadataBase: new URL("https://rodood.ai"),
+  other: {
+    "facebook-domain-verification": "x3qndhifuxse1owal31urbp8iucux2",
+  },
 };
 
 export default function RootLayout({
